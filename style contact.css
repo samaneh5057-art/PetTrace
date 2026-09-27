@@ -25,3 +25,143 @@ h2,
 h3 {
     font-family: 'Playfair Display', serif;
 }
+Sahar sh contact 
+ :root {
+            --primary-color: #d38a59;
+            --primary-hover: #b87548;
+            --bg-color: #fefaf6;
+            --text-dark: #2c2c2c;
+            --text-muted: #6c757d;
+            --accent-light: #fdf3f0;
+            --border-radius-lg: 24px;
+            --border-radius-md: 16px;
+        }
+
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: var(--bg-color);
+            color: var(--text-dark);
+        }
+
+        h1, h2, h3, h4, h5 {
+            font-family: 'Lora', serif;
+            color: var(--text-dark);
+        }
+
+        .text-primary-custom {
+            color: var(--primary-color) !important;
+        }
+
+        .bg-primary-custom {
+            background-color: var(--primary-color) !important;
+            color: white;
+        }
+
+        .btn-primary-custom {
+            background-color: var(--primary-color);
+            color: white;
+            border: none;
+            padding: 10px 24px;
+            border-radius: 50px;
+            transition: all 0.3s ease;
+        }
+
+        .btn-primary-custom:hover {
+            background-color: var(--primary-hover);
+            color: white;
+        }
+
+        .btn-outline-custom {
+            border: 1px solid #ddd;
+            border-radius: 50px;
+            padding: 8px 20px;
+            color: var(--text-dark);
+            background: white;
+            transition: all 0.3s ease;
+        }
+
+        .btn-outline-custom:hover {
+            background-color: var(--accent-light);
+            border-color: var(--primary-color);
+            color: var(--primary-color);
+        }
+
+        /* Hero Section */
+        .hero-section {
+            padding-top: 50px;
+            padding-bottom: 50px;
+        }
+
+        .hero-img-wrapper {
+            position: relative;
+            border-radius: 50% 50% 0 50% / 50% 50% 0 50%;
+            overflow: hidden;
+            box-shadow: 0 10px 30px rgba(211, 138, 89, 0.2);
+        }
+
+        .hero-img-wrapper img {
+            width: 100%;
+            height: auto;
+            object-fit: cover;
+        }
+
+        .badge-icon {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            font-size: 0.85rem;
+            color: var(--text-muted);
+            background: white;
+            padding: 8px 16px;
+            border-radius: 50px;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.03);
+        }
+
+        /* Form Section */
+        .custom-card {
+            background: white;
+            border-radius: var(--border-radius-lg);
+            padding: 40px;
+            box-shadow: 0 5px 20px rgba(0,0,0,0.03);
+            border: 1px solid #f0f0f0;
+            height: 100%;
+        }
+
+        .form-control, .form-select {
+            border-radius: var(--border-radius-md);
+            border: 1px solid #e0e0e0;
+            padding: 12px 16px;
+            background-color: #fcfcfc;
+        }
+
+        .form-control:focus, .form-select:focus {
+            box-shadow: 0 0 0 0.25rem rgba(211, 138, 89, 0.15);
+            border-color: var(--primary-color);
+        }
+
+        .input-group-text {
+            background-color: transparent;
+            border-right: none;
+            color: var(--text-muted);
+        }
+
+        .input-group .form-control {
+            border-left: none;
+        }.contact-info-item {
+            display: flex;
+            align-items: flex-start;
+            gap: 15px;
+            margin-bottom: 25px;
+        }
+
+        .contact-icon {
+            width: 45px;
+            height: 45px;
+            background-color: var(--accent-light);
+            color: var(--primary-color);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.2rem;
+            flex-shrink: 0;}
