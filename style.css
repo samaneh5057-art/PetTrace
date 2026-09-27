@@ -25,3 +25,1113 @@ h2,
 h3 {
     font-family: 'Playfair Display', serif;
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* =====================================================
+   PETTRACE NAVBAR + FOOTER
+===================================================== */
+
+
+/* ================================
+   GLOBAL
+================================ */
+
+* {
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    margin: 0;
+    background: var(--cream);
+    color: var(--dark-brown);
+}
+
+
+/* =====================================================
+   NAVBAR
+===================================================== */
+
+.pettrace-navbar {
+
+    position: fixed;
+
+    top: 0;
+    left: 0;
+
+    width: 100%;
+
+    z-index: 9999;
+
+    padding: 20px 0;
+
+    background: var(--cream);
+
+    border-bottom: 1px solid transparent;
+
+    transition:
+        padding .35s ease,
+        background .35s ease,
+        backdrop-filter .35s ease,
+        box-shadow .35s ease,
+        border-color .35s ease;
+}
+
+
+/* ================================
+   GLASS ON SCROLL
+================================ */
+
+.pettrace-navbar.scrolled {
+
+    padding: 10px 0;
+
+    background: rgba(255, 248, 239, .68);
+
+    backdrop-filter: blur(22px);
+    -webkit-backdrop-filter: blur(22px);
+
+    border-bottom:
+        1px solid rgba(232, 212, 194, .7);
+
+    box-shadow:
+        0 10px 35px rgba(45, 33, 27, .08);
+}
+
+
+/* ================================
+   NAV CONTAINER
+================================ */
+
+.navbar-container {
+
+    width: min(1180px, calc(100% - 48px));
+
+    margin: 0 auto;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: space-between;
+
+    gap: 28px;
+}
+
+
+/* ================================
+   LOGO
+================================ */
+
+.pettrace-logo {
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 10px;
+
+    text-decoration: none;
+
+    color: var(--dark-brown);
+
+    font-family: "Playfair Display", serif;
+
+    font-size: 23px;
+
+    font-weight: 700;
+
+    flex-shrink: 0;
+}
+
+
+.logo-icon {
+
+    width: 43px;
+    height: 43px;
+
+    display: flex;
+
+    align-items: center;
+    justify-content: center;
+
+    border-radius: 50%;
+
+    background: var(--light-pink);
+
+    color: var(--dark-brown);
+}
+
+
+.logo-icon svg {
+
+    width: 21px;
+    height: 21px;
+
+    fill: currentColor;
+}
+
+
+/* ================================
+   DESKTOP NAV
+================================ */
+
+.pettrace-nav-links {
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 4px;
+
+    padding: 5px;
+
+    background: rgba(255, 248, 239, .94);
+
+    border: 1px solid var(--border);
+
+    border-radius: 50px;
+
+    box-shadow:
+        0 6px 25px rgba(45, 33, 27, .045);
+}
+
+
+.nav-link {
+
+    padding: 10px 17px;
+
+    border-radius: 50px;
+
+    text-decoration: none;
+
+    color: var(--muted-brown);
+
+    font-size: 13px;
+
+    font-weight: 600;
+
+    white-space: nowrap;
+
+    transition:
+        background .25s ease,
+        color .25s ease;
+}
+
+
+.nav-link:hover {
+
+    color: var(--dark-brown);
+}
+
+
+.nav-link.active {
+
+    background: var(--light-pink);
+
+    color: var(--dark-brown);
+}
+
+
+/* ================================
+   CTA
+================================ */
+
+.navbar-cta {
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 9px;
+
+    padding: 9px 10px 9px 17px;
+
+    background: var(--terracotta);
+
+    color: var(--cream);
+
+    border-radius: 50px;
+
+    text-decoration: none;
+
+    font-size: 12px;
+
+    font-weight: 600;
+
+    white-space: nowrap;
+
+    transition:
+        background .25s ease,
+        transform .25s ease,
+        box-shadow .25s ease;
+}
+
+
+.navbar-cta:hover {
+
+    background: #B86D42;
+
+    transform: translateY(-2px);
+
+    box-shadow:
+        0 8px 20px rgba(201, 123, 75, .2);
+}
+
+
+.cta-arrow {
+
+    width: 29px;
+    height: 29px;
+
+    display: flex;
+
+    align-items: center;
+    justify-content: center;
+
+    border-radius: 50%;
+
+    background: rgba(255, 255, 255, .13);
+
+    font-size: 15px;
+}
+
+
+/* =====================================================
+   HAMBURGER
+===================================================== */
+
+.mobile-menu-btn {
+
+    display: none;
+
+    width: 43px;
+    height: 43px;
+
+    padding: 0;
+
+    border: 1px solid var(--border);
+
+    border-radius: 50%;
+
+    background: var(--cream);
+
+    cursor: pointer;
+
+    align-items: center;
+    justify-content: center;
+
+    flex-direction: column;
+
+    gap: 5px;
+
+    position: relative;
+
+    z-index: 10001;
+}
+
+
+.mobile-menu-btn span {
+
+    width: 17px;
+    height: 1.5px;
+
+    background: var(--dark-brown);
+
+    border-radius: 10px;
+
+    transition:
+        transform .3s ease,
+        opacity .2s ease;
+}
+
+
+.mobile-menu-btn.active span:nth-child(1) {
+
+    transform:
+        translateY(6.5px)
+        rotate(45deg);
+}
+
+
+.mobile-menu-btn.active span:nth-child(2) {
+
+    opacity: 0;
+}
+
+
+.mobile-menu-btn.active span:nth-child(3) {
+
+    transform:
+        translateY(-6.5px)
+        rotate(-45deg);
+}
+
+
+/* =====================================================
+   MOBILE NAV
+===================================================== */
+
+.mobile-nav {
+
+    display: none;
+}
+
+
+/* =====================================================
+   FOOTER
+===================================================== */
+
+.pettrace-footer {
+
+    position: relative;
+
+    overflow: hidden;
+
+    margin-top: 0;
+
+    padding: 90px 0 25px;
+
+    background: var(--cream);
+
+    border-top: 1px solid var(--border);
+}
+
+
+.footer-decoration {
+
+    position: absolute;
+
+    width: 360px;
+    height: 360px;
+
+    right: -170px;
+    top: -180px;
+
+    border-radius: 50%;
+
+    background: var(--light-pink);
+
+    opacity: .7;
+}
+
+
+.footer-container {
+
+    width: min(1180px, calc(100% - 48px));
+
+    margin: auto;
+
+    position: relative;
+
+    z-index: 2;
+}
+
+
+.footer-main {
+
+    display: grid;
+
+    grid-template-columns:
+        1.5fr
+        .8fr
+        .8fr
+        1.4fr;
+
+    gap: 55px;
+
+    padding-bottom: 65px;
+}
+
+
+/* ================================
+   FOOTER LOGO
+================================ */
+
+.footer-logo {
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 10px;
+
+    text-decoration: none;
+
+    color: var(--dark-brown);
+
+    font-family: "Playfair Display", serif;
+
+    font-size: 24px;
+
+    font-weight: 700;
+}
+
+
+.footer-logo-icon {
+
+    width: 42px;
+    height: 42px;
+
+    display: flex;
+
+    align-items: center;
+    justify-content: center;
+
+    border-radius: 50%;
+
+    background: var(--light-pink);
+}
+
+
+.footer-logo-icon svg {
+
+    width: 21px;
+    height: 21px;
+
+    fill: var(--dark-brown);
+}
+
+
+/* ================================
+   FOOTER BRAND
+================================ */
+
+.footer-brand p {
+
+    max-width: 280px;
+
+    margin: 20px 0 25px;
+
+    color: var(--muted-brown);
+
+    font-size: 14px;
+
+    line-height: 1.7;
+}
+
+
+/* ================================
+   SOCIALS
+================================ */
+
+.footer-socials {
+
+    display: flex;
+
+    gap: 9px;
+}
+
+
+.footer-socials a {
+
+    width: 38px;
+    height: 38px;
+
+    display: flex;
+
+    align-items: center;
+    justify-content: center;
+
+    border: 1px solid var(--border);
+
+    border-radius: 50%;
+
+    color: var(--dark-brown);
+
+    text-decoration: none;
+
+    transition:
+        background .25s ease,
+        color .25s ease,
+        transform .25s ease;
+}
+
+
+.footer-socials a:hover {
+
+    background: var(--terracotta);
+
+    color: var(--cream);
+
+    transform: translateY(-3px);
+}
+
+
+.footer-socials svg {
+
+    width: 15px;
+    height: 15px;
+
+    fill: none;
+
+    stroke: currentColor;
+
+    stroke-width: 1.35;
+
+    stroke-linecap: round;
+
+    stroke-linejoin: round;
+}
+
+
+/* ================================
+   FOOTER COLUMNS
+================================ */
+
+.footer-column {
+
+    display: flex;
+
+    flex-direction: column;
+
+    gap: 13px;
+}
+
+
+.footer-column h4 {
+
+    margin: 4px 0 12px;
+
+    font-family: "DM Sans", sans-serif;
+
+    font-size: 12px;
+
+    text-transform: uppercase;
+
+    letter-spacing: .14em;
+}
+
+
+.footer-column a {
+
+    color: var(--muted-brown);
+
+    text-decoration: none;
+
+    font-size: 14px;
+
+    transition: color .2s ease;
+}
+
+
+.footer-column a:hover {
+
+    color: var(--terracotta);
+}
+
+
+/* ================================
+   FOOTER CTA
+================================ */
+
+.footer-cta {
+
+    padding: 30px;
+
+    background: var(--light-pink);
+
+    border: 1px solid rgba(232, 212, 194, .7);
+
+    border-radius: 24px;
+}
+
+
+.footer-cta-label {
+
+    color: var(--terracotta);
+
+    font-size: 10px;
+
+    font-weight: 700;
+
+    letter-spacing: .16em;
+}
+
+
+.footer-cta h3 {
+
+    margin: 10px 0 8px;
+
+    font-size: 25px;
+
+    line-height: 1.15;
+}
+
+
+.footer-cta p {
+
+    margin: 0 0 22px;
+
+    color: var(--muted-brown);
+
+    font-size: 13px;
+}
+
+
+.footer-cta-button {
+
+    display: inline-flex;
+
+    align-items: center;
+
+    justify-content: space-between;
+
+    gap: 20px;
+
+    min-width: 145px;
+
+    padding: 10px 11px 10px 17px;
+
+    background: var(--terracotta);
+
+    color: var(--cream);
+
+    border-radius: 50px;
+
+    text-decoration: none;
+
+    font-size: 12px;
+
+    font-weight: 600;
+
+    transition:
+        background .25s ease,
+        transform .25s ease;
+}
+
+
+.footer-cta-button:hover {
+
+    background: #B86D42;
+
+    transform: translateY(-2px);
+}
+
+
+.footer-arrow {
+
+    width: 27px;
+    height: 27px;
+
+    display: flex;
+
+    align-items: center;
+    justify-content: center;
+
+    border-radius: 50%;
+
+    background: rgba(255, 255, 255, .13);
+}
+
+
+/* ================================
+   FOOTER BOTTOM
+================================ */
+
+.footer-bottom {
+
+    padding-top: 22px;
+
+    border-top: 1px solid var(--border);
+
+    display: flex;
+
+    justify-content: space-between;
+
+    align-items: center;
+
+    color: var(--muted-brown);
+
+    font-size: 12px;
+}
+
+
+.footer-bottom div {
+
+    display: flex;
+
+    gap: 20px;
+}
+
+
+.footer-bottom a {
+
+    color: inherit;
+
+    text-decoration: none;
+}
+
+
+/* =====================================================
+   TABLET
+===================================================== */
+
+@media (max-width: 1100px) {
+
+    .navbar-container,
+    .footer-container {
+
+        width: min(
+            calc(100% - 36px),
+            900px
+        );
+    }
+
+
+    .pettrace-nav-links {
+
+        gap: 2px;
+    }
+
+
+    .nav-link {
+
+        padding: 9px 12px;
+
+        font-size: 12px;
+    }
+
+
+    .footer-main {
+
+        grid-template-columns:
+            1.4fr
+            1fr
+            1fr;
+
+        gap: 40px;
+    }
+
+
+    .footer-cta {
+
+        grid-column: 1 / -1;
+    }
+
+}
+
+
+/* =====================================================
+   MOBILE
+===================================================== */
+
+@media (max-width: 768px) {
+
+    /* NAVBAR */
+
+    .pettrace-navbar {
+
+        padding: 15px 0;
+    }
+
+
+    .pettrace-navbar.scrolled {
+
+        padding: 8px 0;
+
+        background:
+            rgba(255, 248, 239, .72);
+
+        backdrop-filter: blur(20px);
+
+        -webkit-backdrop-filter: blur(20px);
+    }
+
+
+    .navbar-container {
+
+        width: calc(100% - 32px);
+    }
+
+
+    .pettrace-nav-links,
+    .navbar-cta {
+
+        display: none;
+    }
+
+
+    .pettrace-logo {
+
+        font-size: 20px;
+    }
+
+
+    .logo-icon {
+
+        width: 38px;
+        height: 38px;
+    }
+
+
+    .mobile-menu-btn {
+
+        display: flex;
+    }
+
+
+    /* MOBILE MENU */
+
+    .mobile-nav {
+
+        position: absolute;
+
+        top: calc(100% + 10px);
+
+        left: 16px;
+        right: 16px;
+
+        display: flex;
+
+        flex-direction: column;
+
+        gap: 4px;
+
+        padding: 8px;
+
+        background:
+            rgba(255, 248, 239, .97);
+
+        backdrop-filter: blur(20px);
+
+        -webkit-backdrop-filter: blur(20px);
+
+        border: 1px solid var(--border);
+
+        border-radius: 20px;
+
+        box-shadow:
+            0 18px 45px
+            rgba(45, 33, 27, .14);
+
+        opacity: 0;
+
+        visibility: hidden;
+
+        pointer-events: none;
+
+        transform: translateY(-12px);
+
+        transition:
+            opacity .25s ease,
+            transform .25s ease,
+            visibility .25s ease;
+    }
+
+
+    .mobile-nav.open {
+
+        opacity: 1;
+
+        visibility: visible;
+
+        pointer-events: auto;
+
+        transform: translateY(0);
+    }
+
+
+    .mobile-nav-link {
+
+        display: block;
+
+        width: 100%;
+
+        padding: 14px 15px;
+
+        border-radius: 13px;
+
+        color: var(--muted-brown);
+
+        text-decoration: none;
+
+        font-size: 14px;
+
+        font-weight: 600;
+    }
+
+
+    .mobile-nav-link.active {
+
+        background: var(--light-pink);
+
+        color: var(--dark-brown);
+    }
+
+
+    .mobile-report {
+
+        display: flex;
+
+        align-items: center;
+
+        justify-content: space-between;
+
+        width: 100%;
+
+        margin-top: 4px;
+
+        padding: 14px 15px;
+
+        background: var(--terracotta);
+
+        color: var(--cream);
+
+        border-radius: 13px;
+
+        text-decoration: none;
+
+        font-size: 13px;
+
+        font-weight: 600;
+    }
+
+
+    /* FOOTER */
+
+    .pettrace-footer {
+
+        padding: 65px 0 22px;
+    }
+
+
+    .footer-container {
+
+        width: calc(100% - 32px);
+    }
+
+
+    .footer-main {
+
+        grid-template-columns: 1fr 1fr;
+
+        gap: 38px 25px;
+
+        padding-bottom: 45px;
+    }
+
+
+    .footer-brand {
+
+        grid-column: 1 / -1;
+    }
+
+
+    .footer-cta {
+
+        grid-column: 1 / -1;
+    }
+
+}
+
+
+/* =====================================================
+   SMALL MOBILE
+===================================================== */
+
+@media (max-width: 480px) {
+
+    .navbar-container {
+
+        width: calc(100% - 24px);
+    }
+
+
+    .pettrace-logo {
+
+        font-size: 18px;
+    }
+
+
+    .logo-icon {
+
+        width: 36px;
+        height: 36px;
+    }
+
+
+    .mobile-menu-btn {
+
+        width: 40px;
+        height: 40px;
+    }
+
+
+    .mobile-nav {
+
+        left: 12px;
+        right: 12px;
+    }
+
+
+    .footer-main {
+
+        grid-template-columns: 1fr;
+
+        gap: 32px;
+    }
+
+
+    .footer-brand,
+    .footer-cta {
+
+        grid-column: auto;
+    }
+
+
+    .footer-cta {
+
+        padding: 25px;
+    }
+
+
+    .footer-cta h3 {
+
+        font-size: 22px;
+    }
+
+
+    .footer-bottom {
+
+        flex-direction: column;
+
+        align-items: flex-start;
+
+        gap: 14px;
+    }
+
+}
+

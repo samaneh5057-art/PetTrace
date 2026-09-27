@@ -1,4 +1,4 @@
-÷<!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="en">
 
 <head>
@@ -24,10 +24,291 @@
     <link
         href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500;1,600;1,700&display=swap"
         rel="stylesheet">
+        <link rel="stylesheet" href="./style.css">
 
 </head>
 
 <body>
+  
+    <!-- ================================
+     PETTRACE NAVBAR
+================================ -->
+
+    <header class="pettrace-navbar" id="pettraceNavbar">
+
+        <div class="navbar-container">
+
+            <!-- LOGO -->
+            <a href="index.html" class="pettrace-logo">
+
+                <span class="logo-icon">
+                    <svg viewBox="0 0 24 24" aria-hidden="true">
+                        <circle cx="7" cy="7" r="2.1"></circle>
+                        <circle cx="17" cy="7" r="2.1"></circle>
+                        <circle cx="5.3" cy="12" r="1.9"></circle>
+                        <circle cx="18.7" cy="12" r="1.9"></circle>
+
+                        <path d="M12 11.4c-3 0-5.3 2.4-5.3 5.1
+                             0 2.5 2.3 3.8 5.3 3.8
+                             s5.3-1.3 5.3-3.8
+                             c0-2.7-2.3-5.1-5.3-5.1Z">
+                        </path>
+                    </svg>
+                </span>
+
+                <span>PetTrace</span>
+
+            </a>
+
+
+            <!-- DESKTOP NAVIGATION -->
+            <nav class="pettrace-nav-links">
+
+                <a href="index.html" class="nav-link active">
+                    Home
+                </a>
+
+                <a href="explore.html" class="nav-link">
+                    Explore
+                </a>
+
+                <a href="community.html" class="nav-link">
+                    Community
+                </a>
+
+                <a href="report.html" class="nav-link">
+                    Report a Pet
+                </a>
+
+            </nav>
+
+
+            <!-- DESKTOP CTA -->
+            <a href="report.html" class="navbar-cta">
+
+                <span>Report a Pet</span>
+
+                <span class="cta-arrow">→</span>
+
+            </a>
+
+
+            <!-- MOBILE HAMBURGER -->
+            <button type="button" class="mobile-menu-btn" id="mobileMenuBtn" aria-label="Open menu"
+                aria-expanded="false">
+
+                <span></span>
+                <span></span>
+                <span></span>
+
+            </button>
+
+        </div>
+
+
+        <!-- MOBILE NAVIGATION -->
+        <nav class="mobile-nav" id="mobileNav">
+
+            <a href="index.html" class="mobile-nav-link active">
+                Home
+            </a>
+
+            <a href="explore.html" class="mobile-nav-link">
+                Explore
+            </a>
+
+            <a href="community.html" class="mobile-nav-link">
+                Community
+            </a>
+
+            <a href="report.html" class="mobile-report">
+
+                <span>Report a Pet</span>
+
+                <span>→</span>
+
+            </a>
+
+        </nav>
+
+    </header>
+
+
+
+    <!-- ================================
+     PETTRACE FOOTER
+================================ -->
+
+    <footer class="pettrace-footer">
+
+        <div class="footer-decoration"></div>
+
+        <div class="footer-container">
+
+            <div class="footer-main">
+
+
+                <!-- BRAND -->
+                <div class="footer-brand">
+
+                    <a href="index.html" class="footer-logo">
+
+                        <span class="footer-logo-icon">
+
+                            <svg viewBox="0 0 24 24" aria-hidden="true">
+
+                                <circle cx="7" cy="7" r="2.1"></circle>
+                                <circle cx="17" cy="7" r="2.1"></circle>
+                                <circle cx="5.3" cy="12" r="1.9"></circle>
+                                <circle cx="18.7" cy="12" r="1.9"></circle>
+
+                                <path d="M12 11.4c-3 0-5.3 2.4-5.3 5.1
+                                     0 2.5 2.3 3.8 5.3 3.8
+                                     s5.3-1.3 5.3-3.8
+                                     c0-2.7-2.3-5.1-5.3-5.1Z">
+                                </path>
+
+                            </svg>
+
+                        </span>
+
+                        <span>PetTrace</span>
+
+                    </a>
+
+
+                    <p>
+                        Helping pets find their way home,
+                        one trace at a time.
+                    </p>
+
+
+                    <!-- SOCIALS -->
+                    <div class="footer-socials">
+
+                        <a href="#" aria-label="Instagram">
+
+                            <svg viewBox="0 0 24 24">
+
+                                <rect x="3.5" y="3.5" width="17" height="17" rx="5">
+                                </rect>
+
+                                <circle cx="12" cy="12" r="4">
+                                </circle>
+
+                                <circle cx="17.5" cy="6.5" r=".7" class="social-dot">
+                                </circle>
+
+                            </svg>
+
+                        </a>
+
+
+                        <a href="#" aria-label="Facebook">
+
+                            <svg viewBox="0 0 24 24">
+
+                                <path d="M14 8h3V4h-3c-3.3 0-5 2-5 5v3H6v4h3v4h4v-4h3l1-4h-4V9c0-.7.3-1 1-1Z">
+                                </path>
+
+                            </svg>
+
+                        </a>
+
+
+                        <a href="#" aria-label="Twitter">
+
+                            <svg viewBox="0 0 24 24">
+
+                                <path
+                                    d="M19 7.5v.5c0 5-3.8 10.5-10.7 10.5-2 0-3.9-.6-5.5-1.6h.8c1.6 0 3.1-.5 4.3-1.5-1.5 0-2.8-1-3.2-2.5h.7c.3 0 .6 0 .9-.1-1.6-.3-2.8-1.7-2.8-3.4v-.1c.5.3 1 .4 1.6.5-.9-.7-1.5-1.8-1.5-3 0-.6.2-1.2.5-1.7 1.8 2.2 4.4 3.6 7.3 3.8-.1-.3-.1-.6-.1-.9 0-1.9 1.5-3.5 3.5-3.5 1 0 1.9.4 2.5 1 .7-.2 1.4-.5 2-.8-.2.7-.7 1.3-1.4 1.7.6-.1 1.2-.3 1.8-.5-.4.6-.9 1.1-1.5 1.5Z">
+                                </path>
+
+                            </svg>
+
+                        </a>
+
+                    </div>
+
+                </div>
+
+
+                <!-- EXPLORE -->
+                <div class="footer-column">
+
+                    <h4>Explore</h4>
+
+                    <a href="explore.html">Find a Pet</a>
+                    <a href="community.html">Community</a>
+                    <a href="report.html">Report Lost Pet</a>
+
+                </div>
+
+
+                <!-- SUPPORT -->
+                <div class="footer-column">
+
+                    <h4>Support</h4>
+
+                    <a href="#">How It Works</a>
+                    <a href="#">Safety Tips</a>
+                    <a href="#">Contact Us</a>
+
+                </div>
+
+
+                <!-- CTA -->
+                <div class="footer-cta">
+
+                    <span class="footer-cta-label">
+                        NEED HELP?
+                    </span>
+
+                    <h3>
+                        Help bring a pet
+                        back home.
+                    </h3>
+
+                    <p>
+                        Every report can make
+                        a difference.
+                    </p>
+
+                    <a href="report.html" class="footer-cta-button">
+
+                        <span>Report a Pet</span>
+
+                        <span class="footer-arrow">
+                            →
+                        </span>
+
+                    </a>
+
+                </div>
+
+            </div>
+
+
+            <!-- FOOTER BOTTOM -->
+            <div class="footer-bottom">
+
+                <span>
+                    © 2026 PetTrace. All rights reserved.
+                </span>
+
+                <div>
+
+                    <a href="#">Privacy</a>
+                    <a href="#">Terms</a>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </footer>
+    
 
 
     <!-- Bootstrap JS -->
