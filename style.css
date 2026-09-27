@@ -25,3 +25,181 @@ h2,
 h3 {
     font-family: 'Playfair Display', serif;
 }
+
+
+/* ================================================= */
+/* ACTION CARDS */
+/* ================================================= */
+
+.action-section {
+    background: #f8f3ed;
+    padding: 30px 0 100px;
+}
+
+.action-card {
+    height: 100%;
+    min-height: 330px;
+    border-radius: 28px;
+    padding: 35px;
+    position: relative;
+    overflow: hidden;
+    transition: .4s;
+}
+
+.action-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 25px 50px rgba(40,30,20,.15);
+}
+
+.lost-card {
+    background: #f1d8d1;
+}
+
+.found-card {
+    background: #dce8dc;
+}
+
+.sighting-card {
+    background: #eee1cf;
+}
+
+.action-icon {
+    width: 60px;
+    height: 60px;
+    border-radius: 18px;
+    background: white;
+    display: grid;
+    place-items: center;
+    font-size: 25px;
+    margin-bottom: 35px;
+}
+
+.action-label {
+    font-size: 11px;
+    font-weight: 800;
+    letter-spacing: 2px;
+    color: #746b65;
+}
+
+.action-content h3 {
+    font-size: 28px;
+    line-height: 1.1;
+    margin: 10px 0 15px;
+    max-width: 330px;
+}
+
+.action-content p {
+    color: #716963;
+    line-height: 1.6;
+    max-width: 360px;
+}
+
+.action-link {
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+    margin-top: 15px;
+    color: #292522;
+    text-decoration: none;
+    font-weight: 700;
+    transition: .3s;
+}
+
+.action-link:hover {
+    gap: 16px;
+}
+
+
+/* ================================================= */
+/* RESPONSIVE */
+/* ================================================= */
+
+@media (max-width: 991px) {
+
+    .hero-section {
+        padding: 60px 0;
+    }
+
+    .hero-content {
+        padding: 20px 5%;
+    }
+
+    .hero-image-column {
+        min-height: 500px;
+        margin-top: 30px;
+    }
+
+    .hero-cat-image {
+        height: 500px;
+    }
+
+    .note-one {
+        left: -10px;
+    }
+
+    .note-two {
+        right: -10px;
+    }
+
+    .map-area {
+        height: 550px;
+    }
+
+}
+
+@media (max-width: 576px) {
+
+    .hero-content h1 {
+        font-size: 50px;
+    }
+
+    .search-box {
+        flex-wrap: wrap;
+        padding: 10px;
+    }
+
+    .search-box input {
+        width: 70%;
+    }
+
+    .search-box button {
+        width: 100%;
+        margin-top: 8px;
+    }
+
+    .hero-image-column {
+        min-height: 420px;
+    }
+
+    .hero-cat-image {
+        height: 420px;
+    }
+
+    .hero-note {
+        display: none;
+    }
+
+    .map-area {
+        height: 450px;
+    }
+
+    .selected-pet {
+        width: calc(100% - 30px);
+        left: 15px;
+        bottom: 15px;
+    }
+
+    .map-legend {
+        display: none;
+    }
+
+    .pets-card {
+        padding: 18px;
+    }
+
+    .action-card {
+        min-height: 280px;
+        padding: 25px;
+    }
+
+}
