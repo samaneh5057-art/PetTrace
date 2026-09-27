@@ -136,6 +136,228 @@
         </div>
 
     </section>
+ <!-- =========================
+         FILTER SECTION
+    ========================== -->
+
+    <section class="filter-section">
+
+        <div class="page-container">
+
+            <div class="filter-row">
+
+                <!-- STATUS -->
+                <div class="filter-group status-filters">
+
+                    <button class="filter-btn active">
+                        All
+                    </button>
+
+                    <button class="filter-btn">
+                        Lost
+                    </button>
+
+                    <button class="filter-btn">
+                        Found
+                    </button>
+
+                    <button class="filter-btn">
+                        Sighted
+                    </button>
+
+                </div>
+
+
+                <!-- ANIMAL -->
+                <div class="filter-group animal-filters">
+
+                    <button class="filter-btn">
+                        <i class="bi bi-house-heart"></i>
+                        Dogs
+                    </button>
+
+                    <button class="filter-btn">
+                        <i class="bi bi-emoji-smile"></i>
+                        Cats
+                    </button>
+
+                    <button class="filter-btn">
+                        <i class="bi bi-flower1"></i>
+                        Other
+                    </button>
+
+                </div>
+
+
+                <!-- NEARBY -->
+                <button class="filter-btn nearby-btn">
+
+                    <i class="bi bi-geo-alt"></i>
+
+                    Nearby
+
+                    <i class="bi bi-chevron-down"></i>
+
+                </button>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- =========================
+         MAP + AVAILABLE PETS
+    ========================== -->
+
+    <section class="explore-section">
+
+        <div class="page-container explore-grid">
+
+
+            <!-- MAP -->
+            <div class="map-card">
+
+                <!-- MAP TABS -->
+                <div class="map-tabs">
+
+                    <button class="map-tab active">
+                        Map
+                    </button>
+
+                    <button class="map-tab">
+                        List
+                    </button>
+
+                </div>
+
+
+                <!-- MAP CONTROLS -->
+                <div class="map-controls">
+
+                    <button>+</button>
+
+                    <button>−</button>
+
+                    <button>
+                        <i class="bi bi-crosshair"></i>
+                    </button>
+
+                </div>
+
+
+                <div class="map-image">
+
+                    <img
+                        src="https://staticmap.openstreetmap.de/staticmap.php?center=52.3676,4.9041&zoom=13&size=900x700&maptype=mapnik"
+                        alt="Amsterdam Map"
+                    >
+
+
+                    <span class="map-label amsterdam-label">
+                        Amsterdam
+                    </span>
+
+
+                    <!-- MAP MARKERS -->
+
+                    <span class="map-marker lost m1">
+                        <i class="bi bi-paw-fill"></i>
+                    </span>
+
+                    <span class="map-marker sighted m2">
+                        <i class="bi bi-geo-alt-fill"></i>
+                    </span>
+
+                    <span class="map-marker lost m3">
+                        <i class="bi bi-paw-fill"></i>
+                    </span>
+
+                    <span class="map-marker found m4">
+                        <i class="bi bi-paw-fill"></i>
+                    </span>
+
+                    <span class="map-marker sighted m5">
+                        <i class="bi bi-geo-alt-fill"></i>
+                    </span>
+
+                    <span class="map-marker found m6">
+                        <i class="bi bi-paw-fill"></i>
+                    </span>
+
+                    <span class="map-marker lost m7">
+                        <i class="bi bi-paw-fill"></i>
+                    </span>
+
+                    <span class="map-marker sighted m8">
+                        <i class="bi bi-geo-alt-fill"></i>
+                    </span>
+
+
+                    <!-- SELECTED PET -->
+
+                    <div class="selected-pet">
+
+                        <img
+                            src="https://images.unsplash.com/photo-1518791841217-8f162f1e1131?auto=format&fit=crop&w=180&q=80"
+                            alt="Luna"
+                        >
+
+                        <div>
+
+                            <div class="selected-title">
+
+                                Luna
+
+                                <span class="status-pill lost">
+                                    Lost
+                                </span>
+
+                            </div>
+
+                            <p>
+                                Golden Retriever · Medium
+                            </p>
+
+                            <small>
+                                <i class="bi bi-geo-alt"></i>
+                                0.6 km away
+                            </small>
+
+                        </div>
+
+                        <button>
+                            <i class="bi bi-arrow-right"></i>
+                        </button>
+
+                    </div>
+
+
+                    <!-- MAP LEGEND -->
+
+                    <div class="map-legend">
+
+                        <span>
+                            <i class="legend-dot lost"></i>
+                            Lost
+                        </span>
+
+                        <span>
+                            <i class="legend-dot found"></i>
+                            Found
+                        </span>
+
+                        <span>
+                            <i class="legend-dot sighted"></i>
+                            Sighted
+                        </span>
+
+                    </div>
+
+                </div>
+
+            </div>
 
 
 
