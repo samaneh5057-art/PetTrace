@@ -1,3 +1,85 @@
+/* =========================================================
+   IOS SCROLL REVEAL ANIMATION
+========================================================= */
+
+const animatedElements = document.querySelectorAll(
+    ".custom-card, .map-container, .testimonial-card, .cta-card"
+);
+
+const heroElements = document.querySelectorAll(
+    ".hero-section .col-lg-6:first-child, .hero-section .hero-img-wrapper"
+);
+
+
+if ("IntersectionObserver" in window) {
+
+    const iosObserver = new IntersectionObserver(
+        (entries, observer) => {
+
+            entries.forEach((entry) => {
+
+                if (!entry.isIntersecting) {
+                    return;
+                }
+
+                entry.target.classList.add(
+                    "is-visible"
+                );
+
+                observer.unobserve(
+                    entry.target
+                );
+
+            });
+
+        },
+        {
+            threshold: 0.12,
+
+            rootMargin:
+                "0px 0px -40px 0px"
+        }
+    );
+
+
+    animatedElements.forEach((element) => {
+
+        iosObserver.observe(element);
+
+    });
+
+
+    heroElements.forEach((element) => {
+
+        setTimeout(() => {
+
+            element.classList.add(
+                "is-visible"
+            );
+
+        }, 150);
+
+    });
+
+} else {
+
+    animatedElements.forEach((element) => {
+
+        element.classList.add(
+            "is-visible"
+        );
+
+    });
+
+    heroElements.forEach((element) => {
+
+        element.classList.add(
+            "is-visible"
+        );
+
+    });
+
+}
 document.addEventListener("DOMContentLoaded", () => {
 
     /* =====================================================

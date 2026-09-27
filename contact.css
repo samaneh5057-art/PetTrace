@@ -178,7 +178,413 @@ section {
     transform: translateX(3px);
 }
 
+/* =========================================================
+   iOS-STYLE SMOOTH ANIMATIONS
+========================================================= */
 
+/* Smooth page entrance */
+body {
+    animation: pageFadeIn 0.7s cubic-bezier(0.22, 1, 0.36, 1);
+}
+
+@keyframes pageFadeIn {
+    from {
+        opacity: 0;
+    }
+
+    to {
+        opacity: 1;
+    }
+}
+
+
+/* =========================================================
+   iOS REVEAL
+========================================================= */
+
+.hero-section .col-lg-6:first-child,
+.hero-section .hero-img-wrapper,
+.custom-card,
+.map-container,
+.testimonial-card,
+.cta-card {
+    opacity: 0;
+    transform: translateY(24px) scale(0.985);
+
+    transition:
+        opacity 0.8s cubic-bezier(0.22, 1, 0.36, 1),
+        transform 0.8s cubic-bezier(0.22, 1, 0.36, 1);
+}
+
+.hero-section .col-lg-6:first-child {
+    transition-delay: 0.05s;
+}
+
+.hero-section .hero-img-wrapper {
+    transition-delay: 0.15s;
+}
+
+.custom-card:nth-child(1) {
+    transition-delay: 0.05s;
+}
+
+.custom-card:nth-child(2) {
+    transition-delay: 0.12s;
+}
+
+.is-visible {
+    opacity: 1 !important;
+    transform: translateY(0) scale(1) !important;
+}
+
+
+/* =========================================================
+   HERO FLOATING IMAGE
+========================================================= */
+
+.hero-img-wrapper.is-visible {
+    animation:
+        iosFloat 5s ease-in-out infinite;
+}
+
+@keyframes iosFloat {
+
+    0%,
+    100% {
+        transform: translateY(0);
+    }
+
+    50% {
+        transform: translateY(-7px);
+    }
+
+}
+
+
+/* =========================================================
+   IOS SPRING CARD HOVER
+========================================================= */
+
+.custom-card,
+.testimonial-card,
+.cta-card {
+    will-change: transform;
+}
+
+.custom-card:hover {
+    transform:
+        translateY(-8px)
+        scale(1.008);
+}
+
+.testimonial-card:hover {
+    transform:
+        translateY(-8px)
+        scale(1.008);
+}
+
+.cta-card:hover {
+    transform:
+        translateY(-8px)
+        scale(1.008);
+}
+
+
+/* =========================================================
+   IOS INPUT FOCUS
+========================================================= */
+
+.form-control,
+.form-select {
+    transition:
+        border-color 0.35s ease,
+        box-shadow 0.35s ease,
+        background-color 0.35s ease,
+        transform 0.35s cubic-bezier(0.22, 1, 0.36, 1);
+}
+
+.form-control:focus,
+.form-select:focus {
+    transform: translateY(-2px) scale(1.005);
+
+    box-shadow:
+        0 0 0 4px rgba(201, 123, 75, 0.08),
+        0 8px 20px rgba(45, 33, 27, 0.05);
+}
+
+
+/* =========================================================
+   BUTTON SPRING
+========================================================= */
+
+.btn-primary-custom,
+.btn-outline-custom {
+    transition:
+        transform 0.35s cubic-bezier(0.22, 1, 0.36, 1),
+        box-shadow 0.35s ease,
+        background-color 0.3s ease;
+}
+
+.btn-primary-custom:hover,
+.btn-outline-custom:hover {
+    transform:
+        translateY(-3px)
+        scale(1.015);
+}
+
+.btn-primary-custom:active,
+.btn-outline-custom:active {
+    transform:
+        translateY(0)
+        scale(0.97);
+
+    transition-duration: 0.12s;
+}
+
+
+/* =========================================================
+   BADGE SPRING
+========================================================= */
+
+.badge-icon {
+    transition:
+        transform 0.4s cubic-bezier(0.22, 1, 0.36, 1),
+        box-shadow 0.3s ease,
+        border-color 0.3s ease;
+}
+
+.badge-icon:hover {
+    transform:
+        translateY(-4px)
+        scale(1.025);
+}
+
+
+/* =========================================================
+   PAW DECORATION
+========================================================= */
+
+.paw-print {
+    animation:
+        pawFloat 4s ease-in-out infinite;
+}
+
+.paw-1 {
+    animation-delay: 0s;
+}
+
+.paw-2 {
+    animation-delay: 1.5s;
+}
+
+@keyframes pawFloat {
+
+    0%,
+    100% {
+        transform: translateY(0) rotate(0deg);
+        opacity: 0.45;
+    }
+
+    50% {
+        transform:
+            translateY(-10px)
+            rotate(8deg);
+
+        opacity: 0.8;
+    }
+
+}
+
+
+/* =========================================================
+   IMAGE UPLOAD ANIMATION
+========================================================= */
+
+.image-upload-box {
+    transition:
+        border-color 0.35s ease,
+        background-color 0.35s ease,
+        transform 0.35s cubic-bezier(0.22, 1, 0.36, 1),
+        box-shadow 0.35s ease;
+}
+
+.image-upload-box:hover {
+    transform: translateY(-2px);
+
+    box-shadow:
+        0 8px 24px rgba(45, 33, 27, 0.05);
+}
+
+.image-preview.show {
+    animation:
+        previewAppear 0.45s cubic-bezier(0.22, 1, 0.36, 1);
+}
+
+@keyframes previewAppear {
+
+    from {
+        opacity: 0;
+        transform: translateY(8px) scale(0.97);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0) scale(1);
+    }
+
+}
+
+
+/* =========================================================
+   IMAGE PREVIEW HOVER
+========================================================= */
+
+.image-preview img {
+    transition:
+        transform 0.4s cubic-bezier(0.22, 1, 0.36, 1),
+        box-shadow 0.3s ease;
+}
+
+.image-preview:hover img {
+    transform: scale(1.04);
+
+    box-shadow:
+        0 6px 16px rgba(45, 33, 27, 0.10);
+}
+
+
+/* =========================================================
+   CONTACT ICON SPRING
+========================================================= */
+
+.contact-icon {
+    transition:
+        transform 0.45s cubic-bezier(0.22, 1, 0.36, 1),
+        background-color 0.3s ease,
+        color 0.3s ease,
+        box-shadow 0.3s ease;
+}
+
+.contact-info-item:hover .contact-icon {
+    transform:
+        translateY(-4px)
+        scale(1.1)
+        rotate(-3deg);
+}
+
+
+/* =========================================================
+   SUCCESS MESSAGE
+========================================================= */
+
+.form-success-message {
+    animation:
+        iosSuccess 0.6s cubic-bezier(0.22, 1, 0.36, 1);
+}
+
+@keyframes iosSuccess {
+
+    0% {
+        opacity: 0;
+        transform:
+            translateY(-15px)
+            scale(0.96);
+    }
+
+    60% {
+        transform:
+            translateY(2px)
+            scale(1.01);
+    }
+
+    100% {
+        opacity: 1;
+        transform:
+            translateY(0)
+            scale(1);
+    }
+
+}
+
+
+/* =========================================================
+   SUBMIT LOADING
+========================================================= */
+
+#submitBtn.loading {
+    transform: scale(0.985);
+}
+
+#submitBtn.loading i {
+    animation:
+        iosSpinner 0.8s linear infinite;
+}
+
+@keyframes iosSpinner {
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+
+/* =========================================================
+   MOBILE
+========================================================= */
+
+@media (max-width: 767.98px) {
+
+    .hero-img-wrapper.is-visible {
+        animation:
+            iosFloatMobile 6s ease-in-out infinite;
+    }
+
+    @keyframes iosFloatMobile {
+
+        0%,
+        100% {
+            transform: translateY(0);
+        }
+
+        50% {
+            transform: translateY(-4px);
+        }
+
+    }
+
+    .custom-card:hover,
+    .testimonial-card:hover,
+    .cta-card:hover {
+        transform: translateY(-3px);
+    }
+
+}
+
+
+/* =========================================================
+   REDUCED MOTION
+========================================================= */
+
+@media (prefers-reduced-motion: reduce) {
+
+    body,
+    .hero-img-wrapper,
+    .paw-print,
+    .image-preview,
+    .form-success-message {
+        animation: none !important;
+    }
+
+    .hero-section .col-lg-6:first-child,
+    .hero-section .hero-img-wrapper,
+    .custom-card,
+    .map-container,
+    .testimonial-card,
+    .cta-card {
+        opacity: 1 !important;
+        transform: none !important;
+    }
+
+}
 /* =========================================================
    HERO
 ========================================================= */
