@@ -1,0 +1,236 @@
+:root {
+            --primary-color: #c76d3e;
+            --primary-hover: #a85a30;
+            --bg-color: #fdfbf9;
+            --text-dark: #2c2c2c;
+            --text-muted: #6c757d;
+            --accent-light: #fdf3f0;
+            --border-radius-lg: 24px;
+            --border-radius-md: 16px;
+            --border-color: #eee;
+        }
+
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: var(--bg-color);
+            color: var(--text-dark);
+            padding-top: 30px;
+            padding-bottom: 50px;
+        }
+
+        h1, h2, h3, h4, h5, h6 {
+            font-family: 'Lora', serif;
+            color: var(--text-dark);
+        }
+
+        .text-primary-custom { color: var(--primary-color) !important; }
+        .bg-accent-light { background-color: var(--accent-light) !important; }
+
+        /* =========================================
+           دکمه‌ها و انیمیشن‌های آن‌ها
+           ========================================= */
+        .btn-primary-custom {
+            background-color: var(--primary-color);
+            color: white;
+            border: none;
+            padding: 10px 24px;
+            border-radius: 50px;
+            transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
+            font-weight: 500;
+            position: relative;
+            overflow: hidden;
+        }
+        .btn-primary-custom:hover { 
+            background-color: var(--primary-hover); 
+            color: white; 
+            transform: translateY(-3px);
+            box-shadow: 0 8px 20px rgba(199, 109, 62, 0.3);
+        }
+
+        .btn-outline-custom {
+            border: 1px solid #ccc;
+            border-radius: 50px;
+            padding: 10px 24px;
+            color: var(--text-dark);
+            background: white;
+            transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
+            font-weight: 500;
+        }
+        .btn-outline-custom:hover { 
+            background-color: #fff; 
+            border-color: var(--primary-color); 
+            color: var(--primary-color); 
+            transform: translateY(-3px);
+            box-shadow: 0 8px 20px rgba(0,0,0,0.08);
+        }
+
+        /* انیمیشن پالس برای دکمه گزارش */
+        @keyframes pulse {
+            0% { box-shadow: 0 0 0 0 rgba(199, 109, 62, 0.4); }
+            70% { box-shadow: 0 0 0 10px rgba(199, 109, 62, 0); }
+            100% { box-shadow: 0 0 0 0 rgba(199, 109, 62, 0); }
+        }
+        .pulse-btn { animation: pulse 2s infinite; }
+
+        .badge-lost {
+            background-color: #f8d7da;
+            color: #dc3545;
+            font-weight: 600;
+            padding: 6px 16px;
+            border-radius: 50px;
+            font-size: 0.8rem;
+            letter-spacing: 1px;
+        }
+
+        /* =========================================
+           تصویر اصلی و گالری (هاور زوم)
+           ========================================= */
+        .main-img-container {
+            position: relative;
+            border-radius: var(--border-radius-lg);
+            overflow: hidden;
+            box-shadow: 0 5px 20px rgba(0,0,0,0.05);
+ cursor: pointer;
+        }
+        .main-img-container img { 
+            width: 100%; 
+            height: auto; 
+            object-fit: cover; 
+            transition: transform 0.6s ease;
+        }
+        .main-img-container:hover img {
+            transform: scale(1.05);
+        }
+
+        .expand-icon {
+            position: absolute; bottom: 15px; left: 15px;
+            background: rgba(0,0,0,0.5); color: white;
+            width: 35px; height: 35px; border-radius: 8px;
+            display: flex; align-items: center; justify-content: center;
+            cursor: pointer; transition: all 0.3s ease;
+        }
+        .main-img-container:hover .expand-icon {
+            background: var(--primary-color);
+        }
+
+        .thumbnail-img {
+            width: 60px; height: 60px; object-fit: cover;
+            border-radius: 12px; cursor: pointer;
+            border: 2px solid transparent; 
+            transition: all 0.3s ease;
+        }
+        .thumbnail-img:hover, .thumbnail-img.active { 
+            border-color: var(--primary-color); 
+            transform: translateY(-3px) scale(1.05);
+            box-shadow: 0 5px 15px rgba(199, 109, 62, 0.2);
+        }
+
+        /* =========================================
+           کارت‌های کناری و نقشه
+           ========================================= */
+        .sidebar-card {
+            background: white; border-radius: var(--border-radius-lg);
+            padding: 25px; box-shadow: 0 5px 20px rgba(0,0,0,0.03);
+            border: 1px solid var(--border-color); height: 100%;
+            transition: box-shadow 0.3s ease;
+        }
+        .sidebar-card:hover {
+            box-shadow: 0 10px 30px rgba(0,0,0,0.06);
+        }
+
+        .map-container-sidebar {
+            border-radius: 16px; overflow: hidden; position: relative;
+            height: 180px; cursor: pointer;
+        }
+        .map-container-sidebar img {
+            width: 100%; height: 100%; object-fit: cover;
+            transition: transform 0.6s ease;
+        }
+        .map-container-sidebar:hover img {
+            transform: scale(1.1);
+        }
+
+        /* =========================================
+           تایم‌لاین (Luna's Trace)
+           ========================================= */
+        .timeline-container {
+            background: white; border-radius: var(--border-radius-lg);
+            padding: 40px; box-shadow: 0 5px 20px rgba(0,0,0,0.03);
+            border: 1px solid var(--border-color);
+        }
+        .timeline-track {
+            display: flex; justify-content: space-between; position: relative; margin-top: 30px;
+        }
+        .timeline-track::before {
+            content: ''; position: absolute; top: 15px; left: 5%; right: 5%;
+            height: 2px; background-color: #f0e6e0; z-index: 0;
+        }
+        .timeline-item {
+            position: relative; z-index: 1; text-align: left; flex: 1; padding-right: 15px;
+            transition: all 0.3s ease;
+        }
+        .timeline-dot {
+            width: 30px; height: 30px; background: white; border: 3px solid #f0e6e0;
+            border-radius: 50%; display: flex; align-items: center; justify-content: center;
+            margin-bottom: 15px; color: var(--primary-color); font-size: 0.8rem;
+            transition: all 0.3s ease;
+        }
+        /* هاور روی نقطه تایم‌لاین */
+        .timeline-item:hover .timeline-dot {
+            border-color: var(--primary-color);
+            transform: scale(1.15);
+            box-shadow: 0 0 0 4px rgba(199, 109, 62, 0.15);
+        }
+        .timeline-item img { 
+            width: 80px; height: 60px; object-fit: cover; 
+            border-radius: 8px; margin-top: 10px; 
+            transition: all 0.3s ease;
+        }
+        /* هاور روی تصویر تایم‌لاین */
+        .timeline-item:hover img {
+            transform: scale(1.08) translateY(-3px);
+            box-shadow: 0 8px 15px rgba(0,0,0,0.1);
+        }
+ /* =========================================
+           کارت‌های مشاهده‌های اخیر (Sightings)
+           ========================================= */
+        .sighting-card {
+            background: white; border-radius: var(--border-radius-md);
+            overflow: hidden; box-shadow: 0 4px 15px rgba(0,0,0,0.03);
+            border: 1px solid var(--border-color); height: 100%;
+            transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+        }
+        /* بالا آمدن کارت و افزایش سایه */
+        .sighting-card:hover {
+            transform: translateY(-8px);
+            box-shadow: 0 15px 30px rgba(0,0,0,0.08);
+            border-color: #e0d0c8;
+        }
+        .sighting-card img.sighting-img { 
+            width: 100%; height: 160px; object-fit: cover; 
+            transition: transform 0.5s ease;
+        }
+        /* زوم روی تصویر داخل کارت */
+        .sighting-card:hover img.sighting-img {
+            transform: scale(1.08);
+        }
+        .sighting-body { padding: 15px; }
+
+        /* =========================================
+           بخش دعوت به اقدام (CTA)
+           ========================================= */
+        .cta-section {
+            background: linear-gradient(135deg, #fdf3f0 0%, #fefaf6 100%);
+            border-radius: var(--border-radius-lg); padding: 40px;
+            position: relative; overflow: hidden; border: 1px solid #f0e6e0;
+            transition: all 0.3s ease;
+        }
+        .cta-section:hover {
+            box-shadow: 0 10px 30px rgba(199, 109, 62, 0.08);
+        }
+        .cta-img {
+            transition: transform 0.5s ease;
+        }
+        .cta-section:hover .cta-img {
+            transform: scale(1.05) rotate(2deg);
+        }
