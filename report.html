@@ -1,0 +1,328 @@
+<!DOCTYPE html>
+<html lang="fa" dir="ltr">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>PetTrace - Luna's Profile</title>
+
+  <!-- Bootstrap 5 CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+  <!-- FontAwesome Icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <!-- Google Fonts (Lora for headings, Inter for body) -->
+  <link
+    href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Lora:ital,wght@0,400;0,500;0,600;1,400&display=swap"
+    rel="stylesheet">
+
+  <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+
+  <div class="container">
+
+    <!-- بخش بالایی: پروفایل و اطلاعات -->
+    <div class="row g-4 mb-4">
+      <div class="col-lg-8">
+        <div class="mb-3">
+          <a href="#" class="text-muted text-decoration-none small fw-bold transition-all"
+            style="transition: all 0.3s ease;"><i class="fa-solid fa-arrow-left me-2"></i> Back to Explore</a>
+        </div>
+
+        <div class="row g-4">
+          <!-- تصویر اصلی -->
+          <div class="col-md-5">
+            <div class="main-img-container mb-3">
+              <img
+                src="https://images.unsplash.com/photo-1552053831-71594a27632d?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80"
+                alt="Luna">
+              <div class="expand-icon"><i class="fa-solid fa-expand"></i></div>
+            </div>
+            <!-- گالری تصاویر کوچک -->
+            <div class="d-flex gap-2">
+              <img
+                src="https://images.unsplash.com/photo-1552053831-71594a27632d?ixlib=rb-4.0.3&auto=format&fit=crop&w=150&q=80"
+                class="thumbnail-img active" alt="thumb">
+              <img
+                src="https://images.unsplash.com/photo-1543466835-00a7907e9de1?ixlib=rb-4.0.3&auto=format&fit=crop&w=150&q=80"
+                class="thumbnail-img" alt="thumb">
+              <img
+                src="https://images.unsplash.com/photo-1583337130417-3346a1be7dee?ixlib=rb-4.0.3&auto=format&fit=crop&w=150&q=80"
+                class="thumbnail-img" alt="thumb">
+              <img
+                src="https://images.unsplash.com/photo-1543466835-00a7907e9de1?ixlib=rb-4.0.3&auto=format&fit=crop&w=150&q=80"
+                class="thumbnail-img" alt="thumb">
+            </div>
+          </div>
+
+          <!-- جزئیات -->
+          <div class="col-md-7">
+            <span class="badge-lost mb-3 d-inline-block"><i class="fa-solid fa-circle me-1"
+                style="font-size: 0.5rem;"></i> LOST</span>
+            <h1 class="display-6 fw-bold mb-1">Luna <i class="fa-solid fa-paw text-primary-custom fs-5 ms-1"></i></h1>
+            <p class="text-muted mb-3">Golden Retriever • Medium</p>
+
+            <div class="d-flex flex-wrap gap-2 mb-4">
+              <span class="badge bg-light text-dark border px-3 py-2 rounded-pill fw-normal"><i
+                  class="fa-solid fa-venus text-primary-custom me-1"></i> Female</span>
+              <span class="badge bg-light text-dark border px-3 py-2 rounded-pill fw-normal"><i
+                  class="fa-solid fa-bag-shopping text-primary-custom me-1"></i> Red collar</span>
+              <span class="badge bg-light text-dark border px-3 py-2 rounded-pill fw-normal"><i
+                  class="fa-solid fa-heart text-primary-custom me-1"></i> Friendly</span>
+            </div>
+
+            <div class="mb-3 d-flex align-items-start gap-3">
+              <i class="fa-solid fa-location-dot text-primary-custom mt-1"></i>
+              <div>
+                <h6 class="mb-0 fw-bold small">Last seen</h6>
+                <p class="text-muted small mb-0">Oak Street, Amsterdam</p>
+              </div>
+            </div>
+            <div class="mb-4 d-flex align-items-start gap-3">
+              <i class="fa-solid fa-clock text-primary-custom mt-1"></i>
+              <div>
+                <h6 class="mb-0 fw-bold small">Last seen</h6>
+                <p class="text-muted small mb-0">September 26 • 4:20 PM</p>
+              </div>
+            </div>
+
+            <h5 class="fw-bold mb-2">About Luna</h5>
+            <p class="text-muted small mb-4">Friendly, medium-sized golden retriever with a red collar. She has a small
+              white patch on her chest and a unique bent tail.</p>
+
+            <div class="d-flex flex-wrap gap-2">
+              <span class="badge bg-accent-light text-dark border-0 px-3 py-2 rounded-pill fw-normal transition-all"
+                style="transition: all 0.3s ease;"><i class="fa-solid fa-dog text-primary-custom me-1"></i>
+                Golden</span>
+              <span class="badge bg-accent-light text-dark border-0 px-3 py-2 rounded-pill fw-normal transition-all"
+                style="transition: all 0.3s ease;"><i class="fa-solid fa-ruler text-primary-custom me-1"></i>
+                Medium</span>
+              <span class="badge bg-accent-light text-dark border-0 px-3 py-2 rounded-pill fw-normal transition-all"
+                style="transition: all 0.3s ease;"><i class="fa-solid fa-bag-shopping text-primary-custom me-1"></i> Red
+                collar</span>
+              <span class="badge bg-accent-light text-dark border-0 px-3 py-2 rounded-pill fw-normal transition-all"
+                style="transition: all 0.3s ease;"><i class="fa-solid fa-heart text-primary-custom me-1"></i>
+                Friendly</span>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- ستون کناری (اقدامات و نقشه) -->
+      <div class="col-lg-4">
+        <div class="sidebar-card d-flex flex-column">
+          <div class="text-center mb-4 p-3 rounded-4" style="background-color: #fdf3f0; border: 1px dashed #f0d5c8;">
+            <p class="fst-italic text-muted small mb-0">"Small steps make<br>big reunions" <i
+                class="fa-solid fa-heart text-danger ms-1"></i></p>
+          </div>
+
+          <!-- دکمه با انیمیشن پالس -->
+          <button class="btn btn-primary-custom w-100 mb-3 pulse-btn">
+            <i class="fa-solid fa-bell me-2"></i> Report a Sighting <i class="fa-solid fa-arrow-right ms-2"></i>
+          </button>
+          <button class="btn btn-outline-custom w-100 mb-4">
+            <i class="fa-solid fa-share-nodes me-2"></i> Share
+          </button>
+          <!-- نقشه با افکت زوم -->
+          <div class="map-container-sidebar mt-auto">
+            <img
+              src="https://images.unsplash.com/photo-1524661135-423995f22d0b?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80"
+              alt="Map">
+            <div
+              class="position-absolute top-50 start-50 translate-middle bg-white px-3 py-2 rounded-3 shadow-sm small fw-bold text-center"
+              style="pointer-events: none;">
+              <i class="fa-solid fa-location-dot text-danger"></i> Last seen here<br><span class="text-muted fw-normal"
+                style="font-size: 0.7rem;">Oak Street</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- بخش تایم‌لاین (Luna's Trace) -->
+    <div class="timeline-container mb-5">
+      <div class="d-flex justify-content-between align-items-center mb-4">
+        <div>
+          <h4 class="fw-bold mb-1"><i class="fa-solid fa-paw text-primary-custom me-2 fs-5"></i> Luna's Trace</h4>
+          <p class="text-muted small mb-0">The journey so far</p>
+        </div>
+        <button class="btn btn-outline-custom btn-sm">View on Map <i class="fa-solid fa-arrow-right ms-1"></i></button>
+      </div>
+
+      <div class="timeline-track">
+        <div class="timeline-item">
+          <div class="timeline-dot active"><i class="fa-solid fa-house"></i></div>
+          <h6 class="fw-bold mb-1 small">4:20 PM</h6>
+          <p class="text-muted small mb-1">Oak Street</p>
+          <p class="text-muted" style="font-size: 0.7rem;"><i class="fa-regular fa-clock me-1"></i> Last seen</p>
+          <img
+            src="https://images.unsplash.com/photo-1449824913935-59a10b8d2000?ixlib=rb-4.0.3&auto=format&fit=crop&w=150&q=80"
+            alt="Step 1">
+        </div>
+        <div class="timeline-item">
+          <div class="timeline-dot"><i class="fa-solid fa-eye"></i></div>
+          <h6 class="fw-bold mb-1 small">5:05 PM</h6>
+          <p class="text-muted small mb-1">Riverside Park</p>
+          <p class="text-muted" style="font-size: 0.7rem;"><i class="fa-regular fa-clock me-1"></i> Sighting reported
+          </p>
+          <img
+            src="https://images.unsplash.com/photo-1506744038136-46273834b3fb?ixlib=rb-4.0.3&auto=format&fit=crop&w=150&q=80"
+            alt="Step 2">
+        </div>
+        <div class="timeline-item">
+          <div class="timeline-dot"><i class="fa-solid fa-eye"></i></div>
+          <h6 class="fw-bold mb-1 small">6:10 PM</h6>
+          <p class="text-muted small mb-1">North Avenue</p>
+          <p class="text-muted" style="font-size: 0.7rem;"><i class="fa-regular fa-clock me-1"></i> Possible sighting
+          </p>
+          <img
+            src="https://images.unsplash.com/photo-1477959858617-67f85cf4f1df?ixlib=rb-4.0.3&auto=format&fit=crop&w=150&q=80"
+            alt="Step 3">
+        </div>
+        <div class="timeline-item">
+          <div class="timeline-dot"><i class="fa-solid fa-heart"></i></div>
+          <h6 class="fw-bold mb-1 small">8:45 PM</h6>
+          <p class="text-muted small mb-1">Central Park</p>
+          <p class="text-muted" style="font-size: 0.7rem;"><i class="fa-regular fa-clock me-1"></i> Confirmed sighting
+          </p>
+          <img
+            src="https://images.unsplash.com/photo-1506744038136-46273834b3fb?ixlib=rb-4.0.3&auto=format&fit=crop&w=150&q=80"
+            alt="Step 4">
+        </div>
+      </div>
+    </div>
+
+    <!-- بخش مشاهده‌های اخیر (Recent Sightings) -->
+    <div class="mb-5">
+      <div class="d-flex justify-content-between align-items-center mb-4">
+        <div>
+          <h4 class="fw-bold mb-1"><i class="fa-solid fa-paw text-primary-custom me-2 fs-5"></i> Recent Sightings</h4>
+          <p class="text-muted small mb-0">Community members who have seen Luna</p>
+        </div>
+        <a href="#" class="text-decoration-none small fw-bold text-primary-custom hover-link">View all sightings <i
+            class="fa-solid fa-arrow-right ms-1"></i></a>
+      </div>
+
+      <div class="row g-4">
+        <!-- کارت 1 -->
+        <div class="col-md-6 col-lg-3">
+          <div class="sighting-card">
+            <div class="overflow-hidden">
+              <img
+                src="https://images.unsplash.com/photo-1552053831-71594a27632d?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80"
+                class="sighting-img" alt="Sighting">
+            </div>
+            <div class="sighting-body">
+              <div class="d-flex align-items-center gap-2 mb-2">
+                <img src="https://i.pravatar.cc/150?img=1" class="avatar" alt="User">
+                <div>
+                  <h6 class="mb-0 fw-bold small">Sarah M.</h6>
+                  <p class="text-muted mb-0" style="font-size: 0.7rem;">2 hours ago</p>
+                </div>
+              </div>
+              <p class="text-muted small mb-2"><i class="fa-solid fa-location-dot text-primary-custom me-1"></i>
+                Riverside Park</p>
+              <p class="text-muted small mb-0" style="font-size: 0.8rem;">I saw a dog matching her description near the
+                park.</p>
+            </div>
+          </div>
+        </div>
+        <!-- کارت 2 -->
+        <div class="col-md-6 col-lg-3">
+          <div class="sighting-card">
+            <div class="overflow-hidden">
+              <img
+                src="https://images.unsplash.com/photo-1543466835-00a7907e9de1?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80"
+                class="sighting-img" alt="Sighting">
+            </div>
+            <div class="sighting-body">
+              <div class="d-flex align-items-center gap-2 mb-2">
+                <img src="https://i.pravatar.cc/150?img=3" class="avatar" alt="User">
+                <div>
+                  <h6 class="mb-0 fw-bold small">James T.</h6>
+                  <p class="text-muted mb-0" style="font-size: 0.7rem;">4 hours ago</p>
+                </div>
+              </div>
+              <p class="text-muted small mb-2"><i class="fa-solid fa-location-dot text-primary-custom me-1"></i> North
+                Avenue</p>
+              <p class="text-muted small mb-0" style="font-size: 0.8rem;">Looked like Luna! She was walking towards the
+                cafe.</p>
+            </div>
+          </div>
+        </div>
+        <!-- کارت 3 -->
+        <div class="col-md-6 col-lg-3">
+          <div class="sighting-card">
+            <div class="overflow-hidden">
+              <img
+                src="https://images.unsplash.com/photo-1583337130417-3346a1be7dee?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80"
+                class="sighting-img" alt="Sighting">
+            </div>
+            <div class="sighting-body">
+              <div class="d-flex align-items-center gap-2 mb-2">
+                <img src="https://i.pravatar.cc/150?img=5" class="avatar" alt="User">
+                <div>
+                  <h6 class="mb-0 fw-bold small">Emily R.</h6>
+                  <p class="text-muted mb-0" style="font-size: 0.7rem;">6 hours ago</p>
+                </div>
+              </div>
+              <p class="text-muted small mb-2"><i class="fa-solid fa-location-dot text-primary-custom me-1"></i> Central
+                Park</p>
+              <p class="text-muted small mb-0" style="font-size: 0.8rem;">Yes, I saw her near the lake. She looked a
+                little tired.</p>
+            </div>
+          </div>
+        </div>
+        <!-- کارت 4 -->
+        <div class="col-md-6 col-lg-3">
+          <div class="sighting-card">
+            <div class="overflow-hidden">
+              <img
+                src="https://images.unsplash.com/photo-1543466835-00a7907e9de1?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80"
+                class="sighting-img" alt="Sighting">
+            </div>
+            <div class="sighting-body">
+              <div class="d-flex align-items-center gap-2 mb-2">
+                <img src="https://i.pravatar.cc/150?img=8" class="avatar" alt="User">
+                <div>
+                  <h6 class="mb-0 fw-bold small">Daniel K.</h6>
+                  <p class="text-muted mb-0" style="font-size: 0.7rem;">8 hours ago</p>
+                </div>
+              </div>
+              <p class="text-muted small mb-2"><i class="fa-solid fa-location-dot text-primary-custom me-1"></i>
+                Westerdok</p>
+              <p class="text-muted small mb-0" style="font-size: 0.8rem;">I think I saw her on the street with a man,
+                heading north.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- بخش دعوت به اقدام (CTA) -->
+    <div class="cta-section">
+      <div class="row align-items-center">
+        <div class="col-lg-8">
+          <h3 class="fw-bold mb-2"><i class="fa-solid fa-paw text-primary-custom me-2"></i> Have you seen Luna?</h3>
+          <p class="text-muted mb-4">Your information could help bring her home.</p>
+          <button class="btn btn-primary-custom">
+            Report a Sighting <i class="fa-solid fa-arrow-right ms-2"></i>
+          </button>
+        </div>
+        <div class="col-lg-4 text-center d-none d-lg-block">
+          <img src="https://cdn-icons-png.flaticon.com/512/616/616408.png" alt="Dog and Cat" class="cta-img"
+            style="max-height: 120px; opacity: 0.8;">
+          <p class="fst-italic text-muted small mt-2 mb-0">Together we can find them <i class="fa-regular fa-heart"></i>
+          </p>
+        </div>
+      </div>
+    </div>
+
+  </div>
+
+  <!-- Bootstrap 5 JS -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+
+</html>
