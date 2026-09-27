@@ -1,0 +1,877 @@
+/* =========================================================
+   PETTRACE - CONTACT PAGE
+   Complete CSS
+========================================================= */
+
+
+/* =========================================================
+   ROOT VARIABLES
+========================================================= */
+
+:root {
+
+    /* =========================
+       Main Colors
+    ========================= */
+
+    --cream: #FFF8EF;
+    --light-pink: #FBE4E6;
+    --soft-beige: #F8EBDD;
+    --peach: #F3C6A5;
+
+    --terracotta: #C97B4B;
+    --terracotta-dark: #A96038;
+
+    --dark-brown: #2D211B;
+    --muted-brown: #75645A;
+
+    --border: #E8D4C2;
+    --white: #FFFFFF;
+
+
+    /* =========================
+       Semantic Colors
+    ========================= */
+
+    --primary-color: var(--terracotta);
+    --primary-hover: var(--terracotta-dark);
+
+    --text-dark: var(--dark-brown);
+    --text-muted: var(--muted-brown);
+
+    --accent-light: var(--light-pink);
+
+
+    /* =========================
+       Border Radius
+    ========================= */
+
+    --border-radius-sm: 10px;
+    --border-radius-md: 16px;
+    --border-radius-lg: 24px;
+
+
+    /* =========================
+       Shadows
+    ========================= */
+
+    --shadow-soft:
+        0 5px 20px rgba(45, 33, 27, 0.05);
+
+    --shadow-hover:
+        0 10px 30px rgba(201, 123, 75, 0.15);
+}
+
+
+/* =========================================================
+   GLOBAL
+========================================================= */
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: 'DM Sans', sans-serif;
+    background-color: var(--cream);
+    color: var(--text-dark);
+    margin: 0;
+    padding: 0;
+    overflow-x: hidden;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    font-family: 'Playfair Display', serif;
+    color: var(--dark-brown);
+}
+
+p {
+    line-height: 1.7;
+}
+
+img {
+    max-width: 100%;
+    display: block;
+}
+
+a {
+    text-decoration: none;
+
+    transition:
+        color 0.3s ease,
+        transform 0.3s ease;
+}
+
+
+/* =========================================================
+   TEXT & BACKGROUND
+========================================================= */
+
+.text-primary-custom {
+    color: var(--primary-color) !important;
+}
+
+.bg-primary-custom {
+    background-color: var(--primary-color) !important;
+    color: var(--white);
+}
+
+
+/* =========================================================
+   BUTTONS
+========================================================= */
+
+.btn-primary-custom,
+.btn-outline-custom {
+    font-family: 'DM Sans', sans-serif;
+    font-weight: 500;
+
+    transition:
+        transform 0.3s ease,
+        background-color 0.3s ease,
+        color 0.3s ease,
+        border-color 0.3s ease,
+        box-shadow 0.3s ease;
+}
+
+
+/* Primary Button */
+
+.btn-primary-custom {
+    background-color: var(--primary-color);
+    color: var(--white);
+
+    border: none;
+
+    padding: 10px 24px;
+
+    border-radius: 50px;
+}
+
+.btn-primary-custom:hover {
+    background-color: var(--primary-hover);
+    color: var(--white);
+
+    transform: translateY(-3px);
+
+    box-shadow:
+        0 10px 25px rgba(201, 123, 75, 0.25);
+}
+
+.btn-primary-custom:active {
+    transform: translateY(-1px);
+}
+
+
+/* Outline Button */
+
+.btn-outline-custom {
+    border: 1px solid var(--border);
+
+    border-radius: 50px;
+
+    padding: 8px 20px;
+
+    color: var(--text-dark);
+
+    background-color: var(--white);
+}
+
+.btn-outline-custom:hover {
+    background-color: var(--accent-light);
+
+    border-color: var(--primary-color);
+
+    color: var(--primary-color);
+
+    transform: translateY(-3px);
+
+    box-shadow:
+        0 8px 20px rgba(201, 123, 75, 0.12);
+}
+
+
+/* Button Icons */
+
+.btn-primary-custom i,
+.btn-outline-custom i {
+    transition: transform 0.3s ease;
+}
+
+.btn-primary-custom:hover i {
+    transform: translateX(4px);
+}
+
+.btn-outline-custom:hover i {
+    transform: translateX(3px);
+}
+
+
+/* =========================================================
+   HERO SECTION
+========================================================= */
+
+.hero-section {
+    padding-top: 50px;
+    padding-bottom: 50px;
+}
+
+
+/* Hero Image */
+
+.hero-img-wrapper {
+    position: relative;
+
+    overflow: hidden;
+
+    border-radius:
+        50% 50% 0 50% /
+        50% 50% 0 50%;
+
+    background-color: var(--soft-beige);
+
+    box-shadow:
+        0 10px 30px rgba(201, 123, 75, 0.20);
+
+    transition:
+        transform 0.5s ease,
+        box-shadow 0.5s ease;
+}
+
+.hero-img-wrapper img {
+    width: 100%;
+    height: 100%;
+
+    object-fit: cover;
+
+    transition:
+        transform 0.7s ease;
+}
+
+.hero-img-wrapper:hover {
+    transform: translateY(-6px);
+
+    box-shadow:
+        0 18px 40px rgba(201, 123, 75, 0.25);
+}
+
+.hero-img-wrapper:hover img {
+    transform: scale(1.04);
+}
+
+
+/* =========================================================
+   BADGES
+========================================================= */
+
+.badge-icon {
+    display: inline-flex;
+
+    align-items: center;
+
+    gap: 8px;
+
+    font-size: 0.85rem;
+
+    color: var(--text-muted);
+
+    background-color: var(--white);
+
+    padding: 8px 16px;
+
+    border-radius: 50px;
+
+    border: 1px solid var(--border);
+
+    box-shadow:
+        0 2px 10px rgba(45, 33, 27, 0.03);
+
+    transition:
+        transform 0.3s ease,
+        box-shadow 0.3s ease,
+        border-color 0.3s ease,
+        background-color 0.3s ease;
+}
+
+.badge-icon:hover {
+    transform: translateY(-4px);
+
+    border-color: var(--primary-color);
+
+    background-color: var(--white);
+
+    box-shadow:
+        0 8px 20px rgba(45, 33, 27, 0.08);
+}
+
+
+/* Badge Icons */
+
+.badge-icon i {
+    transition:
+        transform 0.3s ease,
+        color 0.3s ease;
+}
+
+.badge-icon:hover i {
+    transform: scale(1.15);
+}
+
+
+/* =========================================================
+   CUSTOM CARDS
+========================================================= */
+
+.custom-card {
+    background-color: var(--white);
+
+    border-radius: var(--border-radius-lg);
+
+    padding: 40px;
+
+    box-shadow: var(--shadow-soft);
+
+    border: 1px solid var(--border);
+
+    height: 100%;
+
+    transition:
+        transform 0.35s ease,
+        box-shadow 0.35s ease,
+        border-color 0.35s ease;
+}
+
+.custom-card:hover {
+    transform: translateY(-6px);
+
+    box-shadow:
+        0 15px 35px rgba(45, 33, 27, 0.10);
+
+    border-color:
+        rgba(201, 123, 75, 0.35);
+}
+
+
+/* =========================================================
+   FORM
+========================================================= */
+
+.form-control,
+.form-select {
+    border-radius: var(--border-radius-md);
+
+    border: 1px solid var(--border);
+
+    padding: 12px 16px;
+
+    background-color: #FFFCF8;
+
+    color: var(--text-dark);
+
+    transition:
+        border-color 0.3s ease,
+        box-shadow 0.3s ease,
+        background-color 0.3s ease,
+        transform 0.2s ease;
+}
+
+
+/* Input Hover */
+
+.form-control:hover,
+.form-select:hover {
+    border-color:
+        rgba(201, 123, 75, 0.50);
+}
+
+
+/* Input Focus */
+
+.form-control:focus,
+.form-select:focus {
+    box-shadow:
+        0 0 0 4px rgba(201, 123, 75, 0.10);
+
+    border-color:
+        var(--primary-color);
+
+    background-color:
+        var(--white);
+
+    color:
+        var(--text-dark);
+
+    transform:
+        translateY(-1px);
+}
+
+
+/* Placeholder */
+
+.form-control::placeholder {
+    color: #A99A91;
+}
+
+
+/* =========================================================
+   INPUT GROUP
+========================================================= */
+
+.input-group-text {
+    background-color: transparent;
+
+    border: 1px solid var(--border);
+
+    border-right: none;
+
+    color: var(--text-muted);
+
+    transition:
+        color 0.3s ease,
+        border-color 0.3s ease,
+        background-color 0.3s ease;
+}
+
+.input-group .form-control {
+    border-left: none;
+}
+
+
+/* Focus Input Group */
+
+.input-group:focus-within .input-group-text {
+    color: var(--primary-color);
+
+    border-color: var(--primary-color);
+
+    background-color: var(--accent-light);
+}
+
+
+/* =========================================================
+   CONTACT INFO
+========================================================= */
+
+.contact-info-item {
+    display: flex;
+
+    align-items: flex-start;
+
+    gap: 15px;
+
+    margin-bottom: 25px;
+}
+
+
+/* Contact Icon */
+
+.contact-icon {
+    width: 45px;
+    height: 45px;
+
+    background-color: var(--accent-light);
+
+    color: var(--primary-color);
+
+    border-radius: 50%;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    font-size: 1.2rem;
+
+    flex-shrink: 0;
+
+    transition:
+        transform 0.3s ease,
+        background-color 0.3s ease,
+        color 0.3s ease,
+        box-shadow 0.3s ease;
+}
+
+
+/* Contact Hover */
+
+.contact-info-item:hover .contact-icon {
+    transform:
+        scale(1.08)
+        translateY(-3px);
+
+    background-color:
+        var(--primary-color);
+
+    color:
+        var(--white);
+
+    box-shadow:
+        0 8px 18px rgba(201, 123, 75, 0.20);
+}
+
+
+/* Contact Title */
+
+.contact-info-item h6 {
+    transition:
+        color 0.3s ease;
+}
+
+.contact-info-item:hover h6 {
+    color:
+        var(--primary-color);
+}
+
+
+/* =========================================================
+   MAP
+========================================================= */
+
+.map-container {
+    border-radius: var(--border-radius-lg);
+
+    overflow: hidden;
+
+    height: 300px;
+
+    box-shadow: var(--shadow-soft);
+
+    border: 1px solid var(--border);
+
+    transition:
+        transform 0.4s ease,
+        box-shadow 0.4s ease,
+        border-color 0.4s ease;
+}
+
+.map-container iframe {
+    width: 100%;
+    height: 100%;
+
+    border: 0;
+}
+
+.map-container:hover {
+    transform: translateY(-5px);
+
+    box-shadow:
+        0 15px 30px rgba(45, 33, 27, 0.12);
+
+    border-color:
+        rgba(201, 123, 75, 0.35);
+}
+
+
+/* =========================================================
+   TESTIMONIAL
+========================================================= */
+
+.testimonial-card {
+    background-color: var(--white);
+
+    border-radius: var(--border-radius-lg);
+
+    padding: 30px;
+
+    box-shadow: var(--shadow-soft);
+
+    border: 1px solid var(--border);
+
+    height: 100%;
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 20px;
+
+    transition:
+        transform 0.35s ease,
+        box-shadow 0.35s ease,
+        border-color 0.35s ease;
+}
+
+
+/* Testimonial Hover */
+
+.testimonial-card:hover {
+    transform: translateY(-7px);
+
+    box-shadow:
+        0 15px 35px rgba(201, 123, 75, 0.15);
+
+    border-color:
+        rgba(201, 123, 75, 0.35);
+}
+
+
+/* Testimonial Image */
+
+.testimonial-img {
+    width: 80px;
+    height: 80px;
+
+    border-radius: 50%;
+
+    object-fit: cover;
+
+    flex-shrink: 0;
+
+    transition:
+        transform 0.4s ease,
+        box-shadow 0.4s ease;
+}
+
+.testimonial-card:hover .testimonial-img {
+    transform: scale(1.06);
+
+    box-shadow:
+        0 8px 20px rgba(45, 33, 27, 0.12);
+}
+
+
+/* Quote Icon */
+
+.testimonial-card .fa-quote-left {
+    transition:
+        transform 0.3s ease;
+}
+
+.testimonial-card:hover .fa-quote-left {
+    transform:
+        translateX(4px);
+}
+
+
+/* =========================================================
+   CTA
+========================================================= */
+
+.cta-card {
+    background-color: var(--accent-light);
+
+    border-radius: var(--border-radius-lg);
+
+    padding: 30px;
+
+    height: 100%;
+
+    display: flex;
+
+    flex-direction: column;
+
+    justify-content: center;
+
+    border: 1px solid var(--border);
+
+    transition:
+        transform 0.4s ease,
+        box-shadow 0.4s ease,
+        border-color 0.4s ease;
+}
+
+
+/* CTA Hover */
+
+.cta-card:hover {
+    transform: translateY(-7px);
+
+    box-shadow:
+        0 15px 35px rgba(201, 123, 75, 0.15);
+
+    border-color:
+        rgba(201, 123, 75, 0.35);
+}
+
+
+/* CTA Paw */
+
+.cta-card .fa-paw {
+    transition:
+        transform 0.3s ease,
+        color 0.3s ease;
+}
+
+.cta-card:hover .fa-paw {
+    transform:
+        scale(1.15)
+        rotate(-8deg);
+}
+
+
+/* =========================================================
+   DECORATIVE PAWS
+========================================================= */
+
+.paw-print {
+    color: #E8CFC1;
+
+    font-size: 1.5rem;
+
+    position: absolute;
+
+    pointer-events: none;
+
+    transition:
+        transform 0.4s ease,
+        opacity 0.4s ease;
+}
+
+.paw-1 {
+    top: 10%;
+    left: 5%;
+}
+
+.paw-2 {
+    bottom: 20%;
+    right: 10%;
+}
+
+.paw-3 {
+    top: 50%;
+    left: 45%;
+}
+
+
+/* =========================================================
+   SECTION SPACING
+========================================================= */
+
+section {
+    position: relative;
+}
+
+
+/* =========================================================
+   RESPONSIVE - TABLET
+========================================================= */
+
+@media (max-width: 991.98px) {
+
+    .hero-section {
+        padding-top: 35px;
+        padding-bottom: 35px;
+    }
+
+    .custom-card {
+        padding: 30px;
+    }
+
+    .hero-img-wrapper {
+        margin-top: 30px;
+    }
+
+}
+
+
+/* =========================================================
+   RESPONSIVE - MOBILE
+========================================================= */
+
+@media (max-width: 767.98px) {
+
+    .hero-section {
+        padding-top: 25px;
+        padding-bottom: 30px;
+    }
+
+    .custom-card {
+        padding: 24px;
+    }
+
+    .testimonial-card {
+        padding: 20px;
+    }
+
+    .testimonial-img {
+        width: 65px;
+        height: 65px;
+    }
+
+    .map-container {
+        height: 250px;
+    }
+
+    .paw-print {
+        display: none;
+    }
+
+
+    /* Disable large hover movement on mobile */
+
+    .custom-card:hover,
+    .testimonial-card:hover,
+    .cta-card:hover,
+    .map-container:hover,
+    .hero-img-wrapper:hover {
+        transform: none;
+    }
+
+    .hero-img-wrapper:hover img {
+        transform: none;
+    }
+
+}
+
+
+/* =========================================================
+   RESPONSIVE - SMALL MOBILE
+========================================================= */
+
+@media (max-width: 575.98px) {
+
+    .hero-section {
+        padding-top: 20px;
+        padding-bottom: 25px;
+    }
+
+    .btn-primary-custom,
+    .btn-outline-custom {
+        width: 100%;
+
+        justify-content: center;
+    }
+
+    .contact-info-item {
+        gap: 12px;
+    }
+
+    .contact-icon {
+        width: 40px;
+        height: 40px;
+
+        font-size: 1rem;
+    }
+
+    .testimonial-card {
+        flex-direction: column;
+
+        align-items: flex-start;
+    }
+
+}
+
+
+/* =========================================================
+   ACCESSIBILITY
+========================================================= */
+
+@media (prefers-reduced-motion: reduce) {
+
+    html {
+        scroll-behavior: auto;
+    }
+
+    *,
+    *::before,
+    *::after {
+        transition: none !important;
+        animation: none !important;
+    }
+}
