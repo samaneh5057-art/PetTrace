@@ -1,0 +1,27 @@
+:root {
+    /* Main Colors */
+    --cream: #FFF8EF;
+    --light-pink: #FBE4E6;
+    --soft-beige: #F8EBDD;
+    --peach: #F3C6A5;
+
+    /* Accent */
+    --terracotta: #C97B4B;
+
+    /* Text */
+    --dark-brown: #2D211B;
+    --muted-brown: #75645A;
+
+    /* Border */
+    --border: #E8D4C2;
+}
+
+body {
+    font-family: 'DM Sans', sans-serif;
+}
+
+h1,
+h2,
+h3 {
+    font-family: 'Playfair Display', serif;
+}
